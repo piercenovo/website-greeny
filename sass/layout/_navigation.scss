@@ -1,1 +1,38 @@
 
+.header {
+
+    &__nav{
+
+        grid-column: 2 / span 1;
+        justify-self: flex-end;
+        align-self: center;
+
+        &-items{
+            display: flex;
+            list-style: none;
+        }
+
+        &-links{
+            margin-left: 4rem;
+        }
+
+        &-link:link,
+        &-link:visited {
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: $light;
+            font-family: $font-secondary;
+
+            &:hover{
+                color: $color-one;
+            }
+        }
+
+        .active{
+            color: $color-one;
+        }
+
+
+    }
+}

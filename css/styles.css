@@ -29,6 +29,22 @@ body {
   box-sizing: border-box;
 }
 
+.container {
+  display: grid;
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(2, minmax(min-content, 60rem)) [center-end] minmax(6rem, 1fr) [full-end];
+  grid-template-rows: 100vh min-content;
+}
+.container::selection,
+.container ::-moz-selection {
+  color: white;
+  background-color: #fc5c65;
+}
+
+.logo-text {
+  font-family: "Grand Hotel", cursive;
+  color: white;
+}
+
 .heading-1 {
   font-family: "Pacifico", cursive;
   color: black;
@@ -54,20 +70,20 @@ body {
   color: white;
 }
 
-.body {
+.body-text {
   font-family: "Roboto", sans-serif;
   color: black;
 }
-.body--light {
+.body-text--light {
   font-weight: 300;
 }
-.body--regu {
+.body-text--regu {
   font-weight: 500;
 }
-.body--bold {
+.body-text--bold {
   font-weight: 700;
 }
-.body--white {
+.body-text--white {
   color: white;
 }
 
@@ -85,6 +101,87 @@ body {
 
 .u-center-text {
   text-align: center;
+}
+
+.btn {
+  height: 4rem;
+  width: 20rem;
+  border-radius: 2rem;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease-in-out;
+}
+.btn--red {
+  background: #fc5c65;
+  color: white;
+}
+.btn:hover {
+  cursor: pointer;
+  transform: translateY(-0.3rem);
+  background: #eb3b5a;
+}
+
+.header {
+  grid-column: full-start/full-end;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url("/img/header.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 5rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(min-content, 1fr));
+  grid-template-rows: min-content 1fr minmax(6rem, min-content) 1fr;
+}
+.header__logo {
+  font-size: 3.3rem;
+  grid-column: 1/span 1;
+  justify-self: flex-start;
+}
+.header__heading-main {
+  font-size: 10rem;
+  grid-column: 1/-1;
+  justify-self: center;
+  align-self: flex-end;
+}
+.header__heading-secondary {
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  grid-column: 1/-1;
+  justify-self: center;
+  align-self: flex-start;
+}
+.header__btn {
+  grid-column: 1/-1;
+  justify-self: center;
+  align-self: flex-start;
+}
+
+.header__nav {
+  grid-column: 2/span 1;
+  justify-self: flex-end;
+  align-self: center;
+}
+.header__nav-items {
+  display: flex;
+  list-style: none;
+}
+.header__nav-links {
+  margin-left: 4rem;
+}
+.header__nav-link:link, .header__nav-link:visited {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+.header__nav-link:link:hover, .header__nav-link:visited:hover {
+  color: #fc5c65;
+}
+.header__nav .active {
+  color: #fc5c65;
 }
 
 /*# sourceMappingURL=styles.css.map */
