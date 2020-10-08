@@ -1,1 +1,53 @@
-/* Created on 27/04/2020 */ 
+// Section Headings
+.heading-1 {
+    font-family: $font-title;
+    color: $dark;
+
+    &--white {
+        color: $light;
+    }
+}
+
+// Sub-Headings
+.heading-2 {
+    font-family: $font-primary;
+    color: $dark;
+
+    &--light {
+        font-weight: 300;
+    }
+
+    &--regu {
+        font-weight: 400;
+    }
+
+    &--bold {
+        font-weight: 600;
+    }
+
+    &--white {
+        color: $light;
+    }
+}
+
+// Other Text on Page
+.body{
+    font-family: $font-secondary;
+    color: $dark;
+
+    &--light {
+        font-weight: 300;
+    }
+
+    &--regu {
+        font-weight: 500;
+    }
+
+    &--bold{
+        font-weight: 700;
+    }
+
+    &--white{
+        color: $light;
+    }
+}

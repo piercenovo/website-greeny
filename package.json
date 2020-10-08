@@ -1,0 +1,29 @@
+{
+  "name": "greeny",
+  "version": "1.0.0",
+  "description": "Deliciosas Ensalada de Frutas | En la variedad esta el gusto",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\" && exit 1",
+    "scss": "sass --watch ./sass/main.scss ./css/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/piercenovo/website-greeny.git"
+  },
+  "keywords": [
+    "Fruit",
+    "Yogurt",
+    "Delicious",
+    "Eat"
+  ],
+  "author": "Pierce Novoa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/piercenovo/website-greeny/issues"
+  },
+  "homepage": "https://github.com/piercenovo/website-greeny#readme",
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
