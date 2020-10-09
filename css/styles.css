@@ -33,6 +33,7 @@ body {
   display: grid;
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(2, minmax(min-content, 60rem)) [center-end] minmax(6rem, 1fr) [full-end];
   grid-template-rows: 100vh min-content;
+  row-gap: 2rem;
 }
 .container::selection,
 .container ::-moz-selection {
@@ -182,6 +183,46 @@ body {
 }
 .header__nav .active {
   color: #fc5c65;
+}
+
+.about {
+  grid-column: center-start/center-end;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(min-content, 1fr));
+  row-gap: 2rem;
+  align-items: center;
+  text-align: center;
+}
+.about__title {
+  font-size: 4.6rem;
+  grid-column: 1/-1;
+  justify-self: center;
+}
+.about__img {
+  grid-column: 2/3;
+  grid-row: 2/4;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.about__info {
+  padding: 0 5rem;
+}
+.about__info__icon {
+  width: 4.5rem;
+  height: 4.5rem;
+}
+.about__info__main-heading {
+  font-size: 1.8rem;
+}
+.about__info__main-text {
+  font-size: 1.5rem;
+}
+.about__info--1, .about__info--3 {
+  grid-column: 1/2;
+}
+.about__info--2, .about__info--4 {
+  grid-column: 3/4;
 }
 
 /*# sourceMappingURL=styles.css.map */

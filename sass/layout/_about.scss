@@ -1,0 +1,50 @@
+.about{
+    grid-column: center-start / center-end;
+    
+    display: grid;
+    grid-template-columns: repeat(3, minmax(min-content, 1fr));
+    row-gap: 2rem;
+
+    align-items: center;
+    text-align: center;
+
+    &__title {
+        font-size: 4.6rem;
+        grid-column: 1 / -1;
+        justify-self: center;
+    }
+
+    &__img {
+        grid-column: 2 / 3;
+        grid-row: 2 / 4;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    // Overall Style For Each Item
+    &__info {
+        padding: 0 5rem;
+
+        &__icon {
+            width: 4.5rem;
+            height: 4.5rem;
+        }
+
+        &__main-heading {
+            font-size: 1.8rem;
+        }
+
+        &__main-text {
+            font-size: 1.5rem;
+        }
+
+        &--1, &--3 {
+            grid-column: 1 / 2;
+        }
+
+        &--2, &--4 {
+            grid-column: 3 / 4;
+        }
+    }
+}
