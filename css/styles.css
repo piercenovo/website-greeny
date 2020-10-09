@@ -192,6 +192,7 @@ body {
   row-gap: 2rem;
   align-items: center;
   text-align: center;
+  padding-bottom: 1.3rem;
 }
 .about__title {
   font-size: 4.6rem;
@@ -223,6 +224,37 @@ body {
 }
 .about__info--2, .about__info--4 {
   grid-column: 3/4;
+}
+
+.caption {
+  grid-column: full-start/full-end;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/img/caption-2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  padding: 10rem;
+  border: 0.5rem solid white;
+  outline: 0.5rem solid white;
+  outline-offset: -8rem;
+}
+.caption__main-heading-sub {
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: #eb3b5a;
+  letter-spacing: 0.4rem;
+}
+.caption__main-heading {
+  font-size: 8rem;
+  letter-spacing: 0.4rem;
+}
+.caption__secondary-heading {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=styles.css.map */

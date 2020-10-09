@@ -1,0 +1,44 @@
+.caption {
+    grid-column: full-start / full-end;
+
+    background-image: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url("/img/caption-2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    display: grid;
+    
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+
+    // display: flex;
+
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+
+    padding: 10rem;
+    border: .5rem solid $light;
+
+    outline: .5rem solid $light;
+    outline-offset: -8rem;
+
+    &__main-heading-sub {
+        font-size: 4rem;
+        text-transform: uppercase;
+        color: $color-two;
+        letter-spacing: .4rem;
+    }
+
+    &__main-heading {
+        font-size: 8rem;
+        letter-spacing: .4rem;
+    }
+
+    &__secondary-heading {
+        font-size:  2rem;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+}
