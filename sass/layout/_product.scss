@@ -1,1 +1,90 @@
+.products {
+    grid-column: center-start /center-end;
 
+    display: grid;
+    row-gap: 4rem;
+
+    &__main-heading {
+        font-size: 6rem;
+        justify-self: center;
+
+    }
+
+    &__nav {
+        &-items {
+            display: flex;
+            justify-content: center;
+        }
+        &-links {
+            list-style: none;
+        }
+        &-link {
+            text-decoration: none;
+            margin: 0 2rem;
+            font-size: 2rem;
+            color: rgba($color: $dark, $alpha: .5);
+        }
+        .active {
+            color: $color-one;
+        }
+    }
+
+    // Container for Product
+    &__container {
+        display: grid;
+        gap: 4rem;
+        grid-template-columns: repeat(auto-fit, minmax(30rem,1fr));
+    }
+    .product {
+        display: grid;
+        grid-template-rows: 25rem min-content;
+
+        &:hover {
+            box-shadow: 0rem .5rem .7rem rgba($dark, .5);
+            cursor: pointer;
+
+            .product__details { background-color: $color-one}
+            .product__details-price {color: $light}
+        }
+
+        &__img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            grid-column:  1 / -1;
+        }
+
+        &__details {
+            display: grid;
+            grid-template-columns: 2fr 1fr 2fr;
+            grid-template-rows: repeat(3, 1fr);
+
+            justify-items: center;
+            align-items: center;
+            padding: 4rem 8rem;
+            gap:.5rem;
+
+            &-heading {
+                grid-column: 1 / -1;
+                font-size: 2.5rem;
+                text-transform: uppercase;
+            }
+
+            &-price {
+                grid-column: 1 / -1;
+                font-size: 3rem;
+                font-weight: 500;
+                color: $color-one;
+            }
+
+            &-icon {
+                width: 3rem;
+                height: 3rem;
+                fill: $light-x;
+                transition: all .2s ease-in;
+
+                &:hover { transform: translateY(-.3rem); fill: $light}
+            }
+        }
+    }
+}
