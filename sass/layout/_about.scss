@@ -8,7 +8,7 @@
     align-items: center;
     text-align: center;
 
-    padding-bottom: 1.3rem;
+    // padding-bottom: 1.3rem;
 
     &__title {
         font-size: 4.6rem;
@@ -21,7 +21,7 @@
         grid-row: 2 / 4;
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
     }
 
     // Overall Style For Each Item
